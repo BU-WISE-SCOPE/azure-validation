@@ -1,5 +1,6 @@
 import azure.cognitiveservices.speech as sdk
 
+
 def recognize_from_wav(wav_file: str, ref_text: str) -> sdk.SpeechRecognitionResult:
     # Create Speech and Push stream configs
     with open("azure_key.txt") as f:
@@ -27,7 +28,10 @@ def recognize_from_wav(wav_file: str, ref_text: str) -> sdk.SpeechRecognitionRes
     result = recognizer.recognize_once()
     return result
 
-def display_result(result: sdk.SpeechRecognitionResult) -> sdk.PronunciationAssessmentResult:
+
+def display_result(
+    result: sdk.SpeechRecognitionResult,
+) -> sdk.PronunciationAssessmentResult:
     pa_result = sdk.PronunciationAssessmentResult(result)
 
     print("\n=== PRONUNCIATION ASSESSMENT ===")

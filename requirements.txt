@@ -1,0 +1,5 @@
+azure-cognitiveservices-speech
+numpy
+soundfile
+pandas
+matplotlib
